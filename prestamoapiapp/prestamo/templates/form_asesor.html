@@ -1,0 +1,27 @@
+<form action="{% url 'asesores' %}" method="post">
+  {% csrf_token %}
+  <fieldset>
+    <legend><h1>Asesor</h1></legend>
+    {% if error_message %}
+    <p class="error">{{error_message}}</p>
+    {% endif %}
+    <label for="nombre">Nombre</label>
+    <input type="text" name="nombre" />
+    <br />
+
+    <label for="nombre">Apellido</label>
+    <input type="text" name="apellido" />
+    <br />
+
+    <label for="nombre">Edad</label>
+    <input type="text" name="edad" />
+    <br />
+    <input type="submit" name="Enviar" />
+  </fieldset>
+</form>
+
+<ul>
+  {% for asesor in asesores %}
+  <li>{{asesor}}</li>
+  {% endfor %}
+</ul>

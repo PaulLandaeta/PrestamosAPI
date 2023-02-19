@@ -20,13 +20,13 @@ from prestamo.views import AsesorViewSet
 from prestamo.views import TipoDeCreditoAPI
 
 router = routers.DefaultRouter()
-router.register('asesores', AsesorViewSet)
+router.register("asesores", AsesorViewSet)
 
 
 print(include(router.urls))
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('asesores/', include(router.urls)),
-    path('tipos/', TipoDeCreditoAPI.as_view(), name='tipos_api'),
+    path("admin/", admin.site.urls),
+    path("asesores/", include(router.urls)),
+    path("tipos/", TipoDeCreditoAPI.as_view(), name="tipos_api"),
+    path("prestamo/", include("prestamo.urls")),
 ]
-

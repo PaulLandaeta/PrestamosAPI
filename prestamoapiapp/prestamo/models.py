@@ -16,4 +16,3 @@ class Credito(models.Model):
     frecuencia_de_pago = models.CharField(max_length=100)
     id_asesor = models.ForeignKey(Asesor, on_delete=models.CASCADE)
     ciclo = models.PositiveIntegerField()
-    

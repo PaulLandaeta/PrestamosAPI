@@ -1,0 +1,19 @@
+<form action="{% url 'TipoDeCreditos' %}" method="post">
+  {% csrf_token %}
+  <fieldset>
+    <legend><h1>Tipo de Creditos</h1></legend>
+    {% if error_message %}
+    <p class="error">{{error_message}}</p>
+    {% endif %}
+    <label for="nombre">Nombre</label>
+    <input type="text" name="nombre" />
+    <br />
+    <input type="submit" name="Enviar" />
+  </fieldset>
+</form>
+
+<ul>
+  {% for tipoCredito in TipoDeCreditos %}
+  <li>{{tipoCredito}}</li>
+  {% endfor %}
+</ul>

@@ -1,3 +1,3 @@
 #Integrantes 
 - Paul Wilker Landaeta Flores
-- Juan Alberto 
+- Juan Alberto Canqui Ticona
